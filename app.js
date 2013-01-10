@@ -25,8 +25,8 @@ app.configure('development', function () {
     app.use(express.errorHandler());
 });
 
-app.get('/', routes.proxy);
-app.get('/proxy', routes.proxy);
+app.get('/get', routes.get);
+app.get('/post', routes.post);
 
 http.createServer(app).listen(app.get('port'), function (req) {
     console.log("Express server listening on port " + app.get('port'));
